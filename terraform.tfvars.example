@@ -1,0 +1,6 @@
+region = "us-west-2"
+az= "us-west-2a"
+Name = "YOUR-DEMO"
+owner = "YOUR-EMAIL"
+TTL = 48
+public_key = "ssh-rsa AA...."
