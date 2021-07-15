@@ -12,8 +12,10 @@ https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/guides/auth
 
 5. SSH into your newly provisioned machine using the output from the apply. 
 ```bash
-PUBLIC_IP = "55.199.335.319"
+PUBLIC_IP = "55.199.135.119"
 VAULT_ADDR = "https://demo-vault-cluster.private.vault.......63.aws.hashicorp.cloud:8200"
+
+$ ssh -i ~/.ssh/id_rsa ubuntu@55.199.135.119
 ```
 
 6. Set the Vault address

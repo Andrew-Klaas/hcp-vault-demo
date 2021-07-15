@@ -110,6 +110,4 @@ resource "aws_key_pair" "test-tgw-keypair" {
   public_key = "${var.public_key}"
 }
 
-output "PUBLIC_IP" { value = "${aws_instance.test-instance.public_ip}" }
-
 
