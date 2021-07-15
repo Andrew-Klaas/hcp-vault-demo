@@ -97,15 +97,13 @@ resource "aws_instance" "test-instance" {
   vpc_security_group_ids     = [ "${aws_security_group.main-vpc-sg.id}" ]
   key_name                    = "${aws_key_pair.test-tgw-keypair.key_name}"
   associate_public_ip_address = true
-	user_data = <<EOF
-    sudo apt-get update
-		sudo apt-get install -y vim
-    curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
-    sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
-    sudo apt-get update && sudo apt-get install vault
-	EOF
-
+  user_data                   = "${data.template_file.init.rendered}"
 }
+
+data "template_file" "init" {
+  template = "${file("${path.module}/init.tpl")}"
+}
+
 
 resource "aws_key_pair" "test-tgw-keypair" {
   key_name   = "${var.Name}-keypair"
