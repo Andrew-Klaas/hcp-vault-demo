@@ -1,5 +1,6 @@
 # Simple HCP Vault demo
-This demo connects an EC2 instance to HCP via a transit gateway.
+This repo contains demo code to deploy an HCP Vault cluster, HVN, AWS Transit Gateway, and AWS EC2 instance (to connect to your Vault cluster).
+
 
 1. Create an HCP account and service principal credentials for the HVN provider:
 https://registry.terraform.io/providers/hashicorp/hcp/latest/docs/guides/auth
