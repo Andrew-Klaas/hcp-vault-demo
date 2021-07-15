@@ -1,6 +1,10 @@
 region = "us-west-2"
 az= "us-west-2a"
-Name = "YOUR-DEMO"
+
+//Instance Tags
+Name = "YOUR-NAME"
 owner = "YOUR-EMAIL"
 TTL = 48
+
+//Your public key will be uploaded to machine for SSH access
 public_key = "ssh-rsa AA...."
