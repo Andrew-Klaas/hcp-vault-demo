@@ -46,3 +46,5 @@ Raft Committed Index     980
 Raft Applied Index       980
 Last WAL                 269
 ```
+
+8. Grab the Vault Admin token from back in the HCP portal. 
